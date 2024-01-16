@@ -13,4 +13,6 @@
 
 2024.1.16 当前社区热议的是拆分币，是填充聪还是交易拆分聪。https://twitter.com/zen913/status/1744546551303897266
 2024.1.8 出现AIP，类似BIP，但是还很少人参与 https://twitter.com/atomicalsxyz/status/1744359701863612753
-2024.
+2024.1.7 解冻utxo并开始扫货的功能：https://twitter.com/zen913/status/1743922663687700662 可以用在途的utxohttps://twitter.com/zen913/status/1743935058787074480
+之前要utxo都进行完，这样的交易效率很低，价格容易上去 https://twitter.com/zen913/status/1743926256507482460，
+也就是说：谁掌握了拆utxo，如何用在途的utxo，用好扫货功能，谁就能快速交易
