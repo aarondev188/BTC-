@@ -21,3 +21,5 @@
 2023.12.30 做交易所需要一些风险拨备 https://twitter.com/zen913/status/1741098934326677798 肯定还是缺钱
 【重要】关于钱货分离的做法：https://twitter.com/zen913/status/1740272929978654958 https://twitter.com/polin_eths/status/1740662279627289076
 【重要】官网：https://bitatom.gitbook.io/biatom/safe-101/utilize-receive-address-to-separate-assets-and-funds
+关于交易“盲签”： SIGHASH_SINGLE | ANYONECANPAY  https://twitter.com/zen913/status/1739737624909369628
+2024.1.16 看来要做开发，这个文档好好看：https://docs.atomicals.xyz/ 
