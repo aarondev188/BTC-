@@ -19,3 +19,5 @@
 2024.1.16 加锁定，这样不会抢单 https://twitter.com/zen913/status/1743183953882956086
 2024.1.1-5,夸克的mint阶段，索引是一个很大的瓶颈。https://twitter.com/zen913/status/1741727567219237302 https://twitter.com/zen913/status/1741742602461057078
 2023.12.30 做交易所需要一些风险拨备 https://twitter.com/zen913/status/1741098934326677798 肯定还是缺钱
+【重要】关于钱货分离的做法：https://twitter.com/zen913/status/1740272929978654958 https://twitter.com/polin_eths/status/1740662279627289076
+【重要】官网：https://bitatom.gitbook.io/biatom/safe-101/utilize-receive-address-to-separate-assets-and-funds
