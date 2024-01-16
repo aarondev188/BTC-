@@ -1,1 +1,2 @@
-https://twitter.com/zen913/status/1738729103384281372 在 commit tx 输出 100 个 UTXO，给 100 个 reveal tx 使用，一次可以挖 100 张中子
+https://twitter.com/zen913/status/1738729103384281372 在 commit tx 输出 100 个 UTXO，给 100 个 reveal tx 使用，一次可以挖 100 张中子 出现这个问题的原因是 bitwork 只判断 txid 符合要求
+但是 UTXO  = txid + vout 一个 tx 可以有上千个输出，每个输出的 txid 一样，vout不一样 由于这个漏洞，中子可能会成为唯一一个被挖完的 8 位 bitwork ARC-20 代币
