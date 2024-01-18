@@ -25,3 +25,7 @@ https://twitter.com/atomicalsxyz/status/1739318824845922522
 the #bitwork algorithm is hash256 -- exactly the same hash calculation needed by #Bitcoin, but applied to the special Bitwork string. 🦾
 这是用op_return来算的例子：https://mempool.space/address/bc1p3kmclr9nvg34tjh865pp6xuukwxe4lf2jmttvwrfwzm6gcuwzvesqnzz78
 
+Summary:
+1、更好、更快、更讨巧的挖矿算法；
+2、更灵活的PBST签名编程和交易发送；
+3、新一代染色币的实现和交易交换。
