@@ -3,7 +3,7 @@ https://twitter.com/zen913/status/1738729103384281372 在 commit tx 输出 100 �
 但是 UTXO  = txid + vout 一个 tx 可以有上千个输出，每个输出的 txid 一样，vout不一样 由于这个漏洞，中子可能会成为唯一一个被挖完的 8 位 bitwork ARC-20 代币
 commit 挖矿就存在这个问题，reveal 挖矿就不存在。所以剩下的解决办法就是允许挖多张，大家一起卷了。。。
 作者也表示欢迎：https://twitter.com/atomicalsxyz/status/1738741025210823138
-
+举例子https://mempool.space/tx/0000000094369b09906594d7fa037c45181357031ffbe5bd075dac72d39a3cfd
 ---------------
 [更好的索引]
 https://twitter.com/ghostcorn/status/1738875635261714886 一种更高效的ustomized atomicals-electrumx-proxy ，这种索引器的proxy更好啊，也许用上了谁更快。见c)里的记录。 
@@ -15,8 +15,10 @@ https://lulaoshi.info/gpu/
 https://www.bilibili.com/video/BV1yV4y1S7vh/?spm_id_from=333.788&vd_source=32ed8cb8a15c602a257d00d83a1891b9 高频交易dragon相关视频
 -------------------------
 [nSequence]
-uses the nSequence field to increment the nonc
-
+uses the nSequence field to increment the nonce 
+It uses the nSequence field to increment the nonce - very clever and Congratulations for this discover
+https://twitter.com/atomicalsxyz/status/1739481758364528774
+举个例子：https://mempool.space/tx/da03f5fab6cc7dbe230507b9dcfad6ecb7870ace0de5d962c55417f7d57aeaca#vout=0
 -------------------------
 [OP_RETURN ]
 https://twitter.com/atomicalsxyz/status/1739318824845922522
