@@ -13,3 +13,13 @@ https://twitter.com/ghostcorn/status/1738875635261714886 一种更高效的ustom
 用并行的方法挖矿，快速学习只需要看
 https://lulaoshi.info/gpu/
 https://www.bilibili.com/video/BV1yV4y1S7vh/?spm_id_from=333.788&vd_source=32ed8cb8a15c602a257d00d83a1891b9 高频交易dragon相关视频
+-------------------------
+[nSequence]
+uses the nSequence field to increment the nonc
+
+-------------------------
+[OP_RETURN ]
+https://twitter.com/atomicalsxyz/status/1739318824845922522
+the #bitwork algorithm is hash256 -- exactly the same hash calculation needed by #Bitcoin, but applied to the special Bitwork string. 🦾
+这是用op_return来算的例子：https://mempool.space/address/bc1p3kmclr9nvg34tjh865pp6xuukwxe4lf2jmttvwrfwzm6gcuwzvesqnzz78
+
