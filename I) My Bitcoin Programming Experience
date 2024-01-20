@@ -1,1 +1,1 @@
-
+electrum daemon -d not  electrum --testnet daemon start
