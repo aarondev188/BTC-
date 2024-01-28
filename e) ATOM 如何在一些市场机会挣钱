@@ -33,3 +33,7 @@ Summary:
 1、更好、更快、更讨巧的挖矿算法；
 2、更灵活的PBST签名编程和交易发送；
 3、新一代染色币的实现和交易交换。
+------------------------------------------------------------
+[await sleep(0)] 
+来自POW Lab，单线程提高5倍，并被创始人采纳：https://github.com/atomicals/atomicals-js/pull/257
+await sleep(0)的本质是调用setTimeout(fn, 0)。正如这份文档所示，即使参数为0毫秒，setTimeout仍可能延迟4毫秒执行。这阻止了PoW挖矿代码以100%的容量运行，从而显著降低了挖矿算力。根据我们的实际测试，在M1 Max MacBook Pro上使用单线程（CONCURRENCY=1）实现了5倍以上的改善
