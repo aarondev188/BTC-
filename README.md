@@ -201,7 +201,9 @@ Ord运行后，就一直监听80窗口，一旦比特币核心程序有新的区
 
 看看视频里男主和美女是如何庆祝的，[41:20](https://www.youtube.com/watch?v=zXlvkOSVM9M\&t=2480s) Load local Ordinals Block Explorer 看那个clock,如果你的程序里也有，你也会有成就感。恭喜你，开始挣钱了。
 
-\
+***
+
+_欢迎关注本文作者的twitter并提出宝贵意见：_[_https://twitter.com/zzmjxy_](https://twitter.com/zzmjxy)\
 
 
 
