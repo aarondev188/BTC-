@@ -1,0 +1,138 @@
+11\https://medium.com/@web3_amateur/%E6%AF%94%E7%89%B9%E5%B8%81%E5%85%A8%E8%8A%82%E7%82%B9%E4%B8%8Eatomicals%E7%A7%81%E4%BA%BA%E8%8A%82%E7%82%B9%E6%90%AD%E5%BB%BA%E6%95%99%E7%A8%8B-windows-d09c89c625b8
+
+比特币全节点与Atomicals私人节点搭建教程-Windows
+加密小学生
+加密小学生
+
+·
+Follow
+
+6 min read
+·
+Jan 12
+
+
+截至24年1月7号，比特币全节点占用硬盘584GB，并且每天都会增长，因此需要保证有一个大于该数值的硬盘，最好可以800GB以上的固态硬盘。
+
+比特币核心节点
+下载
+下载比特币核心(https://bitcoincore.org/en/download/)，打开安装包一直点击下一步即可。
+
+
+配置
+打开会弹出一个配置页面，在Use a custom data directory这里选择你要存放的目录，取消勾选Limit Block chain storage to 2GB。确认后会进入Loading block index…的页面，需要等一会。
+
+
+安装完成后默认会打开节点程序，我们点击Settings-Options-Open Configuration File来设置配置文件
+
+
+对下面代码中加#的行修改后，复制进(可以覆盖)刚刚打开的配置文件(bitcoin.conf)，配置完成后重新启动比特币节点，以使更改生效
+
+#设置LevelDB数据库缓存的内存大小，可以设置为你内存大小的四分之一左右
+dbcache=4096 
+#开启RPC
+server=1 
+#开启索引
+txindex=1 
+#设置chainstate存放的路径
+datadir=D:\Bitcoin 
+#设置blocks存放的路径
+blocksdir=D:\Bitcoin 
+#配置允许连接的IP
+rpcallowip=127.0.0.1
+rpcallowip=192.168.0.0/16
+rpcallowip=172.16.0.0/12
+#绑定监听ip与端口，默认8332
+rpcbind=0.0.0.0
+#设置用户名
+rpcuser=xxx
+#设置密码
+rpcpassword=xxx
+同步
+接着全节点将自动开始同步工作，如果嫌速度太慢了(正常一天就可以同步好了)，可以下载别人打包的比较新的chainstate和blocks文件夹，解压到你在bitcoin.conf配置文件中写的文件存放位置。
+
+全节点同步成功右下角会有一个勾号
+
+
+Atomicals
+安装docker
+下载docker https://www.docker.com/get-started/
+
+默认安装即可，无需登录。
+
+下载Atomicals ElectrumX Docker
+在想安装的文件夹内右键打开终端，或者按下shift + 右键打开powershell。
+
+git clone https://github.com/Next-DAO/atomicals-electrumx-docker
+
+
+[没有git的话，去https://github.com/Next-DAO/atomicals-electrumx-proxy-docker.git这里直接下载它的压缩包手动解压是一样的。]
+
+配置
+找到docker-compose.yml文件中下面这行进行改动：
+
+    environment:
+      - DAEMON_URL=nextdao:nextdao@${IP:?}:8332
+将nextdao:nextdao@${IP:?}:8332改为你在比特币全节点conf里设置的用户名和密码。
+
+比如
+
+environment:
+      - DAEMON_URL=用户名:密码@host.docker.internal:8332
+使用 — init 选项创建容器：为了防止僵尸进程的出现，建议在创建容器时使用 — init 选项。这会为容器添加一个轻量级的 init 系统，该系统能够正确处理信号并回收僵尸进程。
+
+services:
+  your_service_name:
+    image: your_image_name
+    init: true
+[可选]放数据文件
+官方数据 https://cdn.atomicals.xyz/snapshots/824012/index.html
+
+网友数据 https://p-pc-weboff.byteimg.com/tos-cn-i-9r5gewecjs/osRQsyS2yK0hq9WbAEEizCqNNkqQ6fEzhrhApH
+
+将数据文件解压后，将文件(夹) hist meta utxo COIN 放入atomicals-electrumx-proxy-docker/electrumx-data目录内
+
+
+启动节点
+(每次要用的时候都是同样操作)
+
+先启动比特币全节点和docker
+
+再在atomicals-electrumx-proxy-docker文件夹内右键打开terminal输入
+
+docker-compose pull
+
+docker-compose up -d
+
+
+输入
+
+docker-compose logs -f
+
+就可以查看最新的日志了，ETA显示了预估同步完成的时间
+
+
+输入
+
+docker-compose ps
+
+看到红框的位置变成healthy就同步完成可以用了
+
+
+
+
+关闭容器
+
+docker-compose down
+
+
+连接私人节点
+下载Atomical官方cli程序(https://github.com/atomicals/atomicals-js
+
+找到atomicals-js/.env文件打开，修改如下
+
+#如果本机使用
+ELECTRUMX_PROXY_BASE_URL=http://localhost:8080/proxy 
+#如果不在同一个机器
+ELECTRUMX_PROXY_BASE_URL=http://安装节点的电脑ip:8080/proxy 
+保存后可以正常使用了
